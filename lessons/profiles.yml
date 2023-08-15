@@ -1,0 +1,23 @@
+lessons:
+  outputs:
+    dev:
+      dataset: dbt_julian
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      location: US
+      method: oauth
+      priority: interactive
+      project: peak-sunset-391812
+      threads: 60
+      type: bigquery
+    production:
+      dataset: production
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      location: US
+      method: oauth
+      priority: interactive
+      project: peak-sunset-391812
+      threads: 60
+      type: bigquery
+  target: dev
