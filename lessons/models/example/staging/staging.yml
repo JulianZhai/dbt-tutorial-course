@@ -15,6 +15,14 @@ models:
 
       - name: status
         description: ""
+        tests:
+         - accepted_values:
+            values:
+             - Processing
+             - Cancelled
+             - Shipped
+             - Complete
+             - Returned
 
       - name: gender
         description: ""
