@@ -5,7 +5,7 @@ models:
     description: 'Table of 1 row per order'
     columns:
       - name: order_id
-        description: This is the primary key of the order table
+        description: 'This is the primary key of the order table'
         tests:
           - not_null
           - unique
