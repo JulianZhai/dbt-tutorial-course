@@ -4,6 +4,7 @@ models:
   - name: stg_ecommerce__orders
     columns:
       - name: order_id
+        description: This is the primary key for the order table.
         tests:
           - not_null:
               severity: error
