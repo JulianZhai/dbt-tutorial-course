@@ -41,7 +41,7 @@ models:
       +schema: intermediate
     marts:
       +materialized: view
-      +database: marts
+      +schema: marts
     # Config indicated by + and applies to all files under models/example/
     example:
       +materialized: view
