@@ -17,7 +17,8 @@ renamed as (
         returned_at,
         shipped_at,
         delivered_at,
-        num_of_item
+        num_of_item,
+        num_items_ordered
 
     from source
 
