@@ -15,7 +15,7 @@ order_item_measures AS (
 		SUM(IF(product_department = '{{department_name}}', item_sale_price, 0)) AS total_sold_{{department_name.lower()}}swear{% if not loop.last %},{% endif -%}
 		{% endfor %}
 
-	FROM {{ ref('int_order_products') }}
+	FROM {{ ref('int_orders_products') }}
 	GROUP BY 1
 )
 
