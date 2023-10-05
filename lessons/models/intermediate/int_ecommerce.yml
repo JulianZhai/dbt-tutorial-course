@@ -1,3 +1,5 @@
+version: 2
+
 models:
   - name: int_orders_products
     description: "Order item data joined to product data"
