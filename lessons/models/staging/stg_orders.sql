@@ -1,27 +1,28 @@
 {{ config(materialized = "table") }}
 
-with source as (
+WITH source AS (
+	SELECT *
 
-    select * from {{ source('thelook_ecommerce', 'orders') }}
-
-),
-
-renamed as (
-
-    select
-        order_id,
-        user_id,
-        status,
-        gender,
-        created_at,
-        returned_at,
-        shipped_at,
-        delivered_at,
-        num_of_item,
-        num_items_ordered
-
-    from source
-
+	FROM {{ source('thelook_ecommerce', 'orders') }}
 )
 
-select * from renamed
+SELECT
+	-- IDs
+	order_id,
+	user_id,
+
+	-- Timestamps
+	created_at,
+	returned_at,
+	delivered_at,
+	shipped_at,
+
+	-- Other columns
+	status,
+	num_of_item AS num_items_ordered
+
+	{#- Unused columns:
+		- gender
+	#}
+
+FROM source
