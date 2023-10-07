@@ -42,7 +42,7 @@ models:
       - name: num_of_item
         description: ""
   
-  - name: stg_ecommerce__products
+  - name: stg_products
     description: "Table of products on the online store"
     columns:
       - name: product_id
@@ -80,7 +80,7 @@ models:
               # false if you wanted to have non-string values (e.g. numbers or a TRUE/FALSE column)
               quote: true
 
-  - name: stg_ecommerce__order_items
+  - name: stg_order_items
     description: "Line items from orders"
     columns:
       - name: order_item_id
