@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: orders
+  - name: dim_orders
     description: "Table of order level information"
     columns:
 
